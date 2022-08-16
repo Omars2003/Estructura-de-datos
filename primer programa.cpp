@@ -1,12 +1,15 @@
 #include<iostream>
+#include<time.h>
+#include<stdlib.h>
 using namespace std;
 
 int main(){
 int datos[20]={0},i,opc,n;
+srand(time(NULL));
 while(1)
 {
 
-cout<<"Menu\n";cout<<"o.impresion\n";cout<<"1.Inizializacio manual\n";
+cout<<"Menu\n";cout<<"o.impresion\n";cout<<"1.Inizializacio manual\n";cout<<"2.Inizializacio aleatorio\n";
 
 cout<<"Sleccione una opcion:\n";
 cin>>opc;
@@ -29,7 +32,16 @@ switch(opc){
 		
 		else
 			cout<<"se excede el tamaño del arreglo\n";
-break;
+    break;
+    case 2:
+    		cout<<"Cuantos datos ALEATORIOS quieres ingresar:",
+		cin>>n;
+		if(n<=20){
+			for(i=0;i<n;i++)
+			 datos[i]=1+rand()%100;
+			}
+	break;
+			
 	
 
 
